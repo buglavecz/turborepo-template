@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "turbo run dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,6 +21,7 @@
   "devDependencies": {
     "turbo": "^2.5.4"
   },
+  "packageManager": "pnpm@10.0.0",
   "pnpm": {
     "onlyBuiltDependencies": [
       "bootstrap-vue",
