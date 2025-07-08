@@ -26,6 +26,8 @@ importers:
 
   packages/shared-components: {}
 
+  packages/types: {}
+
 packages:
 
   '@ampproject/remapping@2.3.0':
