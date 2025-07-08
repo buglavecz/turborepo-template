@@ -1,3 +1,4 @@
 packages:
+  - nuxt3
   - packages/*
 
