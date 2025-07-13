@@ -1,15 +1,15 @@
 <template>
-  <CustomLayout>
+  <default-layout>
     <nuxt />
-  </CustomLayout>
+  </default-layout>
 </template>
 
-<script>
-import CustomLayout from '../../frontend/nuxt3/layouts/default.vue'
+<script  lang="ts">
+import DefaultLayout from 'n3-layouts/default.vue'
 
 export default {
   components: {
-   // CustomLayout
+   DefaultLayout
   }
 }
 </script>

@@ -1,5 +1,6 @@
 import type { NuxtConfig } from '@nuxt/types'
 import path from 'path'
+import { Configuration, RuleSetRule } from 'webpack'
 
 const config: NuxtConfig = {
     telemetry: false, //https://github.com/nuxt/telemetry
@@ -42,14 +43,14 @@ const config: NuxtConfig = {
     // Modules: https://go.nuxtjs.dev/config-modules
     modules: [
     ],
-
     // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {
-        /*extend(config) {
+        extend(config: Configuration) {
             config.resolve = config.resolve || {}
             config.resolve.alias = config.resolve.alias || {}
-            config.resolve.alias['@nuxt3-layouts'] = path.resolve(__dirname, '../frontend/nuxt3/layouts')
-        },*/
+            config.resolve.alias['n3-layouts'] = path.resolve(__dirname, '../frontend/nuxt3/layouts')
+            config.resolve.alias['n3-components'] = path.resolve(__dirname, '../frontend/nuxt3/components')
+        },
         loaders: {
             scss: {
                 additionalData: `
