@@ -48,8 +48,8 @@ const config: NuxtConfig = {
         extend(config: Configuration) {
             config.resolve = config.resolve || {}
             config.resolve.alias = config.resolve.alias || {}
-            config.resolve.alias['n3-layouts'] = path.resolve(__dirname, '../frontend/nuxt3/layouts')
-            config.resolve.alias['n3-components'] = path.resolve(__dirname, '../frontend/nuxt3/components')
+            config.resolve.alias['n3-layouts'] = path.resolve(__dirname, '../frontend/apps/web-app/layouts')
+            config.resolve.alias['n3-components'] = path.resolve(__dirname, '../frontend/apps/web-app/components')
         },
         loaders: {
             scss: {
