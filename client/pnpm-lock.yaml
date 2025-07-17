@@ -11,7 +11,7 @@ overrides:
   elliptic: 6.6.1
   mlly: 1.7.3
   nth-check: 2.1.1
-  webpackbar: 5.0.2
+  webpackbar: 7.0.0
 
 importers:
 
@@ -1330,6 +1330,10 @@ packages:
   ansi-styles@4.3.0:
     resolution: {integrity: sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==}
     engines: {node: '>=8'}
+
+  ansis@3.17.0:
+    resolution: {integrity: sha512-0qWUglt9JEqLFr3w1I1pbrChn1grhaiAR2ocX1PP/flRmxgtwTzPFFFnfIlD6aMOLQZgSuCRlidD70lvx8yhzg==}
+    engines: {node: '>=14'}
 
   anymatch@2.0.0:
     resolution: {integrity: sha512-5teOsQWABXHHBFP9y3skS5P3d/WfWXpv3FUpy+LorMrNYaT9pI4oLMQX7jzQ2KklNpGpWHzdCXTDT2Y3XGlZBw==}
@@ -4900,11 +4904,17 @@ packages:
       webpack-command:
         optional: true
 
-  webpackbar@5.0.2:
-    resolution: {integrity: sha512-BmFJo7veBDgQzfWXl/wwYXr/VFus0614qZ8i9znqcl9fnEdiVkdbi0TedLQ6xAK92HZHDJ0QmyQ0fmuZPAgCYQ==}
-    engines: {node: '>=12'}
+  webpackbar@7.0.0:
+    resolution: {integrity: sha512-aS9soqSO2iCHgqHoCrj4LbfGQUboDCYJPSFOAchEK+9psIjNrfSWW4Y0YEz67MKURNvMmfo0ycOg9d/+OOf9/Q==}
+    engines: {node: '>=14.21.3'}
     peerDependencies:
+      '@rspack/core': '*'
       webpack: 3 || 4 || 5
+    peerDependenciesMeta:
+      '@rspack/core':
+        optional: true
+      webpack:
+        optional: true
 
   whatwg-url@5.0.0:
     resolution: {integrity: sha512-saE57nupxk6v3HY35+jzBwYa0rKSy0XR8JSxZPwgLr7ys0IBzhGviA1/TUGJLmSVqs8pb9AnvICXEuOHLprYTw==}
@@ -6078,6 +6088,7 @@ snapshots:
       serialize-javascript: 6.0.2
       upath: 2.0.1
     transitivePeerDependencies:
+      - '@rspack/core'
       - '@vue/compiler-sfc'
       - arc-templates
       - atpl
@@ -6418,8 +6429,9 @@ snapshots:
       webpack-dev-middleware: 5.3.4(webpack@4.47.0)
       webpack-hot-middleware: 2.26.1
       webpack-node-externals: 3.0.0
-      webpackbar: 5.0.2(webpack@4.47.0)
+      webpackbar: 7.0.0(webpack@4.47.0)
     transitivePeerDependencies:
+      - '@rspack/core'
       - '@vue/compiler-sfc'
       - arc-templates
       - atpl
@@ -6943,6 +6955,8 @@ snapshots:
   ansi-styles@4.3.0:
     dependencies:
       color-convert: 2.0.1
+
+  ansis@3.17.0: {}
 
   anymatch@2.0.0:
     dependencies:
@@ -9166,6 +9180,7 @@ snapshots:
       '@nuxt/vue-renderer': 2.18.1
       '@nuxt/webpack': 2.18.1(typescript@4.9.5)(vue@2.7.16)
     transitivePeerDependencies:
+      - '@rspack/core'
       - '@vue/compiler-sfc'
       - arc-templates
       - atpl
@@ -11015,12 +11030,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  webpackbar@5.0.2(webpack@4.47.0):
+  webpackbar@7.0.0(webpack@4.47.0):
     dependencies:
-      chalk: 4.1.2
-      consola: 2.15.3
+      ansis: 3.17.0
+      consola: 3.4.2
       pretty-time: 1.1.0
       std-env: 3.9.0
+    optionalDependencies:
       webpack: 4.47.0
 
   whatwg-url@5.0.0:
