@@ -1,6 +1,8 @@
 # Dependencies
 node_modules
 
+.turbo
+
 # Logs
 *.log*
 
