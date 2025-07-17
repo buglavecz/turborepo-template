@@ -37,7 +37,7 @@
       "elliptic": "6.6.1",
       "mlly": "1.7.3",
       "nth-check": "2.1.1",
-      "webpackbar": "5.0.2"
+      "webpackbar": "7.0.0"
     }
   }
 }
